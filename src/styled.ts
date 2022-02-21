@@ -11,7 +11,7 @@ export const WrapContent = styled.div`
   background: #292929;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 `
 export const Wrap = styled.div`
   width: 100%;

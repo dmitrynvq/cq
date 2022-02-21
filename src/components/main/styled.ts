@@ -4,14 +4,12 @@ import { Plock } from "react-plock";
 
 export const Wrap = styled.div`
   position: relative;
-  background: coral;
-  //width: 100vh;
+  background: darkolivegreen;
   max-width: 1200px;
-  //min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
+  //overflow: hidden;
   //height: 100vh;
 `
 
