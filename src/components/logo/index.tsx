@@ -1,10 +1,11 @@
-import { Img } from "./styled"
+import { Img, Wrap } from "./styled"
 
 const Logo = () => {
     return (
-        <div>
-            <Img src="https://www.pngmart.com/files/13/Instagram-Logo-PNG-Free-Download-1.png" alt=""/>
-        </div>
+        <Wrap>
+            <Img src="https://www.pnglib.com/wp-content/uploads/2020/01/apple-logo_5e123aa8c10f6.png" alt=""/>
+            <b style={{fontSize: '22px'}}>Able</b>
+        </Wrap>
     )
 }
 

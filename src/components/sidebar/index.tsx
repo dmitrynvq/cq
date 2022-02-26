@@ -1,17 +1,50 @@
+import { Link } from "react-router-dom";
 import Logo from "../logo";
-import {Wrap, WrapContainer} from "./styled";
+import {Wrap, Nav} from "./styled";
+import ProfileBarSidebar from "../profile/profileBarSidebar";
+import AddCard from "../addCard";
+import ProfileInfo from "../profile/profileInfo";
 
 const Sidebar = () => {
     return (
         <Wrap>
-            <WrapContainer>
+            <div>
                 <Logo/>
-                <div>A Feed</div>
-                <div>B Profile</div>
-                <div>C Categories</div>
-                <div>D Favorite</div>
-                <div>E Settings</div>
-            </WrapContainer>
+                <ProfileBarSidebar/>
+                {/*<ProfileInfo/>*/}
+                <AddCard/>
+                <Nav>
+                    <div>
+                        <Link to='/'>A Feed</Link>
+                    </div>
+                    <br/>
+                    <hr/>
+                    <br/>
+                    <div>
+                        <Link to='/profile'>B Categories:</Link>
+                        <div>
+                            <br/>
+                            <div>Animals</div>
+                            <div>Anime</div>
+                            <div>Animals</div>
+                            <div>Cars</div>
+                            <div>Gaming</div>
+                            <div>Art</div>
+                            <div>History</div>
+                            <div>Politics</div>
+                            <div>Other</div>
+                            <div>Sports</div>
+                        </div>
+                    </div>
+                </Nav>
+            </div>
+            <div>
+                <Nav>
+                    <div>
+                        <Link to='/exit'>Exit</Link>
+                    </div>
+                </Nav>
+            </div>
         </Wrap>
     )
 }

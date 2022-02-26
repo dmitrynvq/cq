@@ -15,6 +15,8 @@ export const Wrap = styled.div`
 
 export const WrapCards = styled.div`
   width: 100%;
+  //position: relative;
+  //top: 50px;
   height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
@@ -28,4 +30,5 @@ export const CardMob = styled.div`
   scroll-snap-align: start;
 `
 export const PlockWrap = styled(Plock)`
+     background: #1f1f1f;
 `

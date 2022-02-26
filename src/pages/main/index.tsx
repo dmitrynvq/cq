@@ -1,15 +1,16 @@
-import Footer from "../footer";
+import Footer from "../../components/footer";
 import {Wrap, WrapCards, CardMob, PlockWrap} from "./styled";
-import Navbar from "../navbar/desktop";
+import Navbar from "../../components/navbar/desktop";
 import React, {useEffect, useRef, useState} from "react";
-import Card from "../card";
+import Card from "../../components/card";
 // import Masonry from 'react-masonry-css'
 // @ts-ignore
 import { Plock } from "react-plock";
 import {useWindowSize} from "@react-hook/window-size";
-import NavBarMobile from "../navbar/mobile";
+import NavBarMobile from "../../components/navbar/mobile";
 import { arrCards } from "../../const/data";
-
+import Logo from "../../components/logo";
+import TopNav from '../../components/navbar/mobile/top'
 const Main = () => {
     const [width] = useWindowSize()
     const [col, setCol] = useState(1)
@@ -24,8 +25,15 @@ const Main = () => {
 
     return (
         <Wrap>
+            <div>
+                {
+                    width > 500 && <Navbar/>
+                }
+            </div>
             {/*{*/}
-            {/*    width > 500 && <Navbar/>*/}
+            {/*    width < 500 && <div>*/}
+            {/*        <TopNav/>*/}
+            {/*    </div>*/}
             {/*}*/}
             {
                 width > 500 ?
@@ -43,9 +51,11 @@ const Main = () => {
                         }
                     </WrapCards>
             }
-            {/*{*/}
-            {/*    width < 500 &&  <NavBarMobile/>*/}
-            {/*}*/}
+            {
+                width < 500 && <div>
+                    <NavBarMobile/>
+                </div>
+            }
         </Wrap>
     )
 }
